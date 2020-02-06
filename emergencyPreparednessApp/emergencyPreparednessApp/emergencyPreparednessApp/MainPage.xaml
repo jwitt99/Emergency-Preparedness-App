@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="emergencyPreparednessApp.MainPage">
+
+    <StackLayout>
+        <Button Text="Supplies" TextColor="AntiqueWhite" BackgroundColor="#0f7a26" Clicked="SuppliesButton_OnClicked" StyleId="supplies"/>
+        <Button Text="Where to Go" TextColor="AntiqueWhite" BackgroundColor="#0f7a26" Clicked="Handle_Clicked" StyleId="where"/>
+        <Button Text="Who to Contact" TextColor="AntiqueWhite" BackgroundColor="#0f7a26" Clicked="Handle_Clicked" StyleId="contact" />
+
+        <Label Text="Hola!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" x:Name="change"/>
+    </StackLayout>
+
+
+</ContentPage>
