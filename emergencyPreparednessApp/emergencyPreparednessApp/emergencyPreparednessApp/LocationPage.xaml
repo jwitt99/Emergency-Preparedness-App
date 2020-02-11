@@ -18,7 +18,7 @@
                 <Button Text="Monte Verde" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
                 <Button Text="Santa Elena" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
                 <Button Text="San Luis" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-                <Button Text="Not From Here" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="NotSureRegionButton_OnClicked" StyleId="contact" />
+                <Button Text="Not sure" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#FF1111" Clicked="NotSureRegionButton_OnClicked" StyleId="contact" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

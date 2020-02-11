@@ -4,10 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundImage="mountains.jpg"
              x:Class="emergencyPreparednessApp.MainPage">
     <ScrollView>
         <StackLayout>
-            <Label 
+            <Image WidthRequest="150" HeightRequest="150" Source="cneLogo"></Image>
+            <Label BackgroundColor="Green" TextColor="Black"  
                HorizontalOptions="Center" FontSize="Large"
                VerticalOptions="CenterAndExpand" x:Name="change">
                 <Label.Text>¡Bienvenido!    Welcome!</Label.Text>
