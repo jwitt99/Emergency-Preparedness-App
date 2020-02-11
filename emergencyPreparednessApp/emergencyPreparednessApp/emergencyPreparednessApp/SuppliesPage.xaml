@@ -6,11 +6,13 @@
              mc:Ignorable="d"
              x:Class="emergencyPreparednessApp.SuppliesPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Main Page" BackgroundColor="#0f7a26" TextColor="AntiqueWhite" Clicked="MainPageButton_OnClicked"/>
-            <Label Text="Supplies Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Main Page" BackgroundColor="#0f7a26" TextColor="AntiqueWhite" Clicked="MainPageButton_OnClicked"/>
+                <Label Text="Supplies Page"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

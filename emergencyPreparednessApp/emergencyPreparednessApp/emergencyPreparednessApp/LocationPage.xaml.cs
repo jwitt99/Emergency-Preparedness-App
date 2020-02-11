@@ -12,14 +12,21 @@ namespace emergencyPreparednessApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LocationPage : ContentPage
     {
+        private string popupName = "You sure?";
+        private string popupText = "Choosing a location will allow you to get more specific information";
         public LocationPage()
         {
             InitializeComponent();
         }
 
+        private async void NotSureRegionButton_OnClicked(object sender, EventArgs e) {
+            bool answer = await DisplayAlert(popupName, popupText, "Yes", "No");
+            if (answer) {
+                await Navigation.PushAsync(new MainRiskMapPage());
+            } 
+        }
         private async void RegionButton_OnClicked(object sender, EventArgs e)
         {
-            change.Text = ((Button)sender).Text;
             await Navigation.PushAsync(new MainRiskMapPage());
         }
 

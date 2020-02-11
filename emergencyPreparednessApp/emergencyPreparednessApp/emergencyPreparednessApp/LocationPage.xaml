@@ -6,16 +6,20 @@
              mc:Ignorable="d"
              x:Class="emergencyPreparednessApp.LocationPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="What region are you from?(but in your selected language)" 
-                   FontSize="Large"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" x:Name="change"/>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="AppDes" WidthRequest="300" HeightRequest="200"
+           HorizontalOptions="Center"></Image>
+                <Label Text="What region are you from?(but in your selected language)" 
+                       FontSize="Large"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" x:Name="change"/>
 
-            <Button Text="Monte Verde" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-            <Button Text="Santa Elena" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-            <Button Text="San Luis" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-            <Button Text="Not From Here" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-        </StackLayout>
+                <Button Text="Monte Verde" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
+                <Button Text="Santa Elena" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
+                <Button Text="San Luis" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
+                <Button Text="Not From Here" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="NotSureRegionButton_OnClicked" StyleId="contact" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

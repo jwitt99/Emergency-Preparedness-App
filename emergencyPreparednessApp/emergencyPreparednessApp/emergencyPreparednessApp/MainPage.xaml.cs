@@ -17,17 +17,9 @@ namespace emergencyPreparednessApp
         {
             InitializeComponent();
         }
-        void Handle_Clicked(object sender, System.EventArgs e)
+        private async void LanguageButton_OnClicked(object sender, EventArgs e)
         {
-            //        count++;
-            //       ((Button)sender).Text = $"You clicked {count} times.";
-            change.Text = ((Button)sender).StyleId;
-        }
-
-        private async void SuppliesButton_OnClicked(object sender, EventArgs e)
-        {
-            change.Text = ((Button)sender).StyleId;
-            await Navigation.PushAsync(new SuppliesPage());
+            await Navigation.PushAsync(new LocationPage());
         }
     }
 }
