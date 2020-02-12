@@ -17,8 +17,10 @@ namespace emergencyPreparednessApp
         {
             InitializeComponent();
         }
+        
         private async void LanguageButton_OnClicked(object sender, EventArgs e)
         {
+            App.Lang = ((Button)sender).StyleId;
             await Navigation.PushAsync(new LocationPage());
         }
     }

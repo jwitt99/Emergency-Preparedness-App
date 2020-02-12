@@ -19,6 +19,12 @@ namespace emergencyPreparednessApp
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            change.Text = App.Lang;
+        }
+
         private async void NotSureRegionButton_OnClicked(object sender, EventArgs e) {
             bool answer = await DisplayAlert(popupName, popupText, "Yes", "No");
             if (answer) {

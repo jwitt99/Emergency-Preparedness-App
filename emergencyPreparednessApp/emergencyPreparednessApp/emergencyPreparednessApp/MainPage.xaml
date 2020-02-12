@@ -11,13 +11,17 @@
             <Image WidthRequest="150" HeightRequest="150" Source="cneLogo"></Image>
             <Label BackgroundColor="Green" TextColor="Black"  
                HorizontalOptions="Center" FontSize="Large"
-               VerticalOptions="CenterAndExpand" x:Name="change">
-                <Label.Text>¡Bienvenido!    Welcome!</Label.Text>
+                x:Name="change">
+                <Label.Text>¡Bienvenido!</Label.Text>
             </Label>
-            <Button FontSize="Large" Text="English" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="english"/>
-            <Button FontSize="Large" Text="Spanish" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="spanish"/>
-            <Button FontSize="Large" Text="French" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="french" />
-            <Button FontSize="Large" Text="German" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="german" />
+            <Label BackgroundColor="Green" TextColor="Black"  
+               HorizontalOptions="Center" FontSize="Large">
+                <Label.Text>Welcome!</Label.Text>
+            </Label>
+            <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200"  FontSize="Large" Text="English" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="english"/>
+            <Button  HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2"  WidthRequest="200" FontSize="Large" Text="Spanish" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="spanish"/>
+            <Button  HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="French" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="french" />
+            <Button  HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="German" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="german" />
         </StackLayout>
     </ScrollView>
 

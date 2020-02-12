@@ -6,9 +6,10 @@ namespace emergencyPreparednessApp
 {
     public partial class App : Application
     {
-        private string lang = "English";
+        public static string Lang = "English";
         public App()
         {
+            
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());

@@ -10,9 +10,16 @@
             <StackLayout>
                 <Image Source="AppDes" WidthRequest="300"
            HorizontalOptions="Center"></Image>
-                <Button Text="Landslide" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-                <Button Text="Flood" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
-                <Button Text="Tropical Storm" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" StyleId="contact" />
+                <Label Text="Natural disasters" 
+                       FontSize="Medium" TextColor="Black"
+                    HorizontalOptions="Start" x:Name="label1"/>
+                <Button Text="Landslide" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked"/>
+                <Button Text="Flood" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked"/>
+                <Label Text="Natural disasters" 
+                       FontSize="Medium" TextColor="Black"
+                    HorizontalOptions="Start" x:Name="label2"/>
+                <Button Text="Tropical Storm" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked"/>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
