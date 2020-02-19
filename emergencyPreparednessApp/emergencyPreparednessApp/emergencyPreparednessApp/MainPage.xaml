@@ -14,7 +14,7 @@
                 x:Name="change">
                 <Label.Text>¡Bienvenido!</Label.Text>
             </Label>
-            <Label 
+            <Label  
                HorizontalOptions="Center" >
                 <Label.Text>Welcome!</Label.Text>
             </Label>
