@@ -4,25 +4,27 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImage="mountains.jpg"
+             BackgroundImage="bg1.jpg"
              x:Class="emergencyPreparednessApp.MainPage">
     <ScrollView>
         <StackLayout>
             <Image WidthRequest="150" HeightRequest="150" Source="cneLogo"></Image>
-            <Label BackgroundColor="Green" TextColor="Black"  
-               HorizontalOptions="Center" FontSize="Large"
+            <Label 
+               HorizontalOptions="Center" 
                 x:Name="change">
                 <Label.Text>¡Bienvenido!</Label.Text>
             </Label>
-            <Label BackgroundColor="Green" TextColor="Black"  
-               HorizontalOptions="Center" FontSize="Large">
+            <Label 
+               HorizontalOptions="Center" >
                 <Label.Text>Welcome!</Label.Text>
             </Label>
-            <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200"  FontSize="Large" Text="English" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="english"/>
-            <Button  HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2"  WidthRequest="200" FontSize="Large" Text="Spanish" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="spanish"/>
-            <Button  HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="French" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="french" />
-            <Button  HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="German" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="german" />
+            <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="English" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="e"/>
+            <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="Español" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="s"/>
+            <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="Français" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="f" />
+            <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="Deutsche" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="g" />
+            <Label HeightRequest="12"></Label>
+            <StackLayout Orientation="Horizontal" BackgroundColor="Black" Padding="10">
+            </StackLayout>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>

@@ -6,6 +6,30 @@
              mc:Ignorable="d"
              x:Class="emergencyPreparednessApp.App">
     <Application.Resources>
-
+        <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+            <On Platform="Android" Value="OpenSans-Bold.ttf#Open Sans" />
+            <On Platform="iOS" Value="OpenSans-Bold" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="NormalFont">
+            <On Platform="Android" Value="OpenSans-Regular.ttf#Open Sans" />
+            <On Platform="iOS" Value="OpenSans-Regular" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="ItalicFont">
+            <On Platform="Android" Value="OpenSans-Italic.ttf#Open Sans" />
+            <On Platform="iOS" Value="OpenSans-Italic" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="BoldItalicFont">
+            <On Platform="Android" Value="OpenSans-BoldItalic.ttf#Open Sans" />
+            <On Platform="iOS" Value="OpenSans-BoldItalic" />
+        </OnPlatform>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="40" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource NormalFont}" />
+        </Style>
     </Application.Resources>
 </Application>

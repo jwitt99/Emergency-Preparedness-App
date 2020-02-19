@@ -4,22 +4,29 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundColor="#11401e"
              x:Class="emergencyPreparednessApp.MainRiskMapPage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Image Source="AppDes" WidthRequest="300"
-           HorizontalOptions="Center"></Image>
+                <Image x:Name="img" Source="bg5" VerticalOptions="Start"
+           HorizontalOptions="CenterAndExpand" HeightRequest="300" Aspect="Fill"></Image>
+                <Label Text="Risks" 
+                    HorizontalOptions="Start" x:Name="label1" />
+                <Button x:Name="landslide" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Landslide" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RegionButton_OnClicked"/>
+                <Button x:Name="flood" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Flood" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RegionButton_OnClicked"/>
+                <Button x:Name="fire" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Fire" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RegionButton_OnClicked"/>
+                <Button x:Name="fallenObject" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Fallen object" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RegionButton_OnClicked"/>
                 <Label Text="Natural disasters" 
-                       FontSize="Medium" TextColor="Black"
-                    HorizontalOptions="Start" x:Name="label1"/>
-                <Button Text="Landslide" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked"/>
-                <Button Text="Flood" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked"/>
-                <Label Text="Natural disasters" 
-                       FontSize="Medium" TextColor="Black"
-                    HorizontalOptions="Start" x:Name="label2"/>
-                <Button Text="Tropical Storm" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked"/>
-                
+                    HorizontalOptions="Start" x:Name="label2" />
+                <Button x:Name="tropicalStorm" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Tropical Storm" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#823007" Clicked="RegionButton_OnClicked"/>
+                <Button x:Name="earthquake" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Earthquake" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#823007" Clicked="RegionButton_OnClicked"/> 
+                <Button x:Name="volcanicActivity" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Volcanic Activity" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#823007" Clicked="RegionButton_OnClicked"/> 
+                <Label HeightRequest="12"></Label>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Black" Padding="10" >
+                    <Button x:Name="changeLang" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Language" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="LanguageButton_OnClicked" StyleId="f" />
+                    <Button x:Name="changeLoc" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Location" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="RegionButton_OnClicked" StyleId="g" />
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
