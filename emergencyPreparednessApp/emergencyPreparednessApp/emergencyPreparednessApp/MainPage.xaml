@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              BackgroundImage="bg1.jpg"
+             NavigationPage.HasNavigationBar="false"
              x:Class="emergencyPreparednessApp.MainPage">
+    
     <ScrollView>
         <StackLayout>
             <Image WidthRequest="150" HeightRequest="150" Source="cneLogo"></Image>
@@ -23,7 +25,8 @@
             <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="Français" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="f" />
             <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" FontSize="Large" Text="Deutsche" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="LanguageButton_OnClicked" StyleId="g" />
             <Label HeightRequest="12"></Label>
-            <StackLayout Orientation="Horizontal" BackgroundColor="Black" Padding="10">
+            <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" BackgroundColor="Black" Padding="10">
+                <Button x:Name="contactInfo" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Contact Info" TextColor="AntiqueWhite" BackgroundColor="#AA1010" Clicked="ContactInfoButton_OnClicked" />
             </StackLayout>
         </StackLayout>
     </ScrollView>

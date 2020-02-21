@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="#B97C0D"
+             x:Class="emergencyPreparednessApp.ContactInfo">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label HorizontalOptions="Center" x:Name="titleLabel" Text="Contact info:"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="police" Text="Police: xxx-xxx-xxxx"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="fireFighters" Text="Fire Fighters: xxx-xxx-xxxx"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="redCross" Text="Red Cross: xxx-xxx-xxxx"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="CPI" Text="CPI: xxx-xxx-xxxx"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="friendsSchool" Text="Friends School: xxx-xxx-xxxx"/>
+                <Button VerticalOptions="EndAndExpand"  HorizontalOptions="End" BorderRadius="20" BorderWidth="2" WidthRequest="100" FontSize="Large" Text="Back" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="BackButton_OnClicked"/>
+                <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" BackgroundColor="Black" Padding="10" >
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,7 +6,9 @@ namespace emergencyPreparednessApp
 {
     public partial class App : Application
     {
-        public static string Lang = "English";
+        public static string Lang = "e";
+        public static string Risk = "landslide";
+        public static string NaturalDisaster = "earthquake";
         public App()
         {
             

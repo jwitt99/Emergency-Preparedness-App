@@ -17,6 +17,21 @@ namespace emergencyPreparednessApp
             InitializeComponent();
         }
 
+        private async void NatDisButton_OnClicked(object sender, EventArgs e)
+        {
+            App.NaturalDisaster = ((Button)sender).StyleId;
+            await Navigation.PushAsync(new NaturalDisaster());
+        }
+        private async void RiskButton_OnClicked(object sender, EventArgs e)
+        {
+            App.Risk = ((Button)sender).StyleId;
+            await Navigation.PushAsync(new Risk());
+        }
+
+        private async void ContactInfoButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ContactInfo());
+        }
         private async void RegionButton_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LocationPage());
@@ -33,45 +48,60 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
+                    label1.Text = "Risks";
+                    landslide.Text = "landslide";
+                    flood.Text = "flood";
+                    fire.Text = "fire";
+                    fallenObject.Text = "Fallen Object";
+                    label2.Text = "Natural Disasters";
+                    tropicalStorm.Text = "tropicalStorm";
+                    earthquake.Text = "earthquake";
+                    volcanicActivity.Text = "Secondary Effects from Volcanic Activity";
+                    changeLang.Text = "Change Language";
+                    changeLoc.Text = "Change Location";
+                    contactInfo.Text = "contact info";
                     break;
                 case "s":
                     label1.Text = "Spanish label1";
                     landslide.Text = "Spanish landslide";
                     flood.Text = "Spanish flood";
                     fire.Text = "Spanish fire";
-                    fallenObject.Text = "Spanish fallenObject";
+                    fallenObject.Text = "Spanish Fallen Object";
                     label2.Text = "Spanish label2";
                     tropicalStorm.Text = "Spanish tropicalStorm";
                     earthquake.Text = "Spanish earthquake";
-                    volcanicActivity.Text = "Spanish volcanicActivity";
+                    volcanicActivity.Text = "Spanish Secondary Effects from Volcanic Activity";
                     changeLang.Text = "Spanish changeLang";
                     changeLoc.Text = "Spanish changeLoc";
+                    contactInfo.Text = "Spanish contact info";
                     break;
                 case "f":
                     label1.Text = "French label1";
                     landslide.Text = "French landslide";
                     flood.Text = "French flood";
                     fire.Text = "French fire";
-                    fallenObject.Text = "French fallenObject";
+                    fallenObject.Text = "French Fallen Object";
                     label2.Text = "French label2";
                     tropicalStorm.Text = "French tropicalStorm";
                     earthquake.Text = "French earthquake";
-                    volcanicActivity.Text = "French volcanicActivity";
+                    volcanicActivity.Text = "French Secondary Effects from Volcanic Activity";
                     changeLang.Text = "French changeLang";
                     changeLoc.Text = "French changeLoc";
+                    contactInfo.Text = "French contact info";
                     break;
                 case "g":
                     label1.Text = "German label1";
                     landslide.Text = "German landslide";
                     flood.Text = "German flood";
                     fire.Text = "German fire";
-                    fallenObject.Text = "German fallenObject";
+                    fallenObject.Text = "German Fallen Object";
                     label2.Text = "German label2";
                     tropicalStorm.Text = "German tropicalStorm";
                     earthquake.Text = "German earthquake";
-                    volcanicActivity.Text = "German volcanicActivity";
+                    volcanicActivity.Text = "German Secondary Effects from Volcanic Activity";
                     changeLang.Text = "German changeLang";
                     changeLoc.Text = "German changeLoc";
+                    contactInfo.Text = "German contact info";
                     break;
                 default:
                     label1.Text = "Something broke";

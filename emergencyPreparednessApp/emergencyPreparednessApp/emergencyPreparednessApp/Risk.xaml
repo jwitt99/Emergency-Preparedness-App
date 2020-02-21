@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="emergencyPreparednessApp.Risk"
+             BackgroundColor="#11401e">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image x:Name="img" Source="bg5" VerticalOptions="Start"
+               HorizontalOptions="CenterAndExpand" HeightRequest="300" Aspect="Fill"></Image>
+                <Label Text="Fallen Objects" 
+                         HorizontalOptions="CenterAndExpand" x:Name="titleLabel" HorizontalTextAlignment="Center" />
+
+                <Button x:Name="btnWhat" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="What do you do?" Clicked="btnWhatClicked" />
+                <StackLayout x:Name="MoreDetails" IsVisible="False">
+                    <Label x:Name="what1" FontSize="25"  Text="what text 1"></Label>
+                    <Label x:Name="what2" FontSize="25"  Text="what text 2"></Label>
+                </StackLayout>
+                <Button x:Name="btnPrepare" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="How do you prepare?" Clicked="btnPrepareClicked" />
+                <StackLayout x:Name="MoreDetails2" IsVisible="False">
+                    <Label x:Name="prep1" FontSize="25"  Text="prep text 1"></Label>
+                    <Label x:Name="prep2" FontSize="25"  Text="prep text 2"></Label>
+                </StackLayout>
+                <Label HeightRequest="12"></Label>
+                <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" BackgroundColor="Black" Padding="10" >
+                    <Button x:Name="changeLang" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Language" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="LanguageButton_OnClicked" StyleId="f" />
+                    <Button x:Name="contactInfo" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Contact Info" TextColor="AntiqueWhite" BackgroundColor="#AA1010" Clicked="ContactInfoButton_OnClicked" />
+                    <Button x:Name="changeLoc" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Location" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="RegionButton_OnClicked" StyleId="g" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

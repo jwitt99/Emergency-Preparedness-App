@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              BackgroundImage="bg4.jpg"
+             NavigationPage.HasNavigationBar="false"
              x:Class="emergencyPreparednessApp.LocationPage">
     <ContentPage.Content>
         <ScrollView>
@@ -15,11 +16,12 @@
                 <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Monte Verde" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
                 <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Santa Elena" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
                 <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="San Luis" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
-                <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Cero Plano" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
+                <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Cerro Plano" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
                 <Button x:Name="notSureButton" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Not sure" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#FF1111" Clicked="NotSureRegionButton_OnClicked" />
                 <Label HeightRequest="12"></Label>
-                <StackLayout Orientation="Horizontal" BackgroundColor="Black" Padding="10">
+                <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" BackgroundColor="Black" Padding="10">
                     <Button x:Name="changeLang" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Language" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="LanguageButton_OnClicked"/>
+                    <Button x:Name="contactInfo" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Contact Info" TextColor="AntiqueWhite" BackgroundColor="#AA1010" Clicked="ContactInfoButton_OnClicked" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>
