@@ -39,35 +39,47 @@ namespace emergencyPreparednessApp
             {
                 case "e":
                     titleLabel.Text = "Contact Info";
-                    police.Text = "police: xxx-xxx-xxxx";
-                    fireFighters.Text = "fireFighters: xxx-xxx-xxxx";
-                    redCross.Text = "redCross: xxx-xxx-xxxx";
-                    CPI.Text = "CPI: xxx-xxx-xxxx";
-                    friendsSchool.Text = "friendsSchool: xxx-xxx-xxxx";
+                    emergency.Text = "Emergency: 911";
+                    police.Text = "Police: 2645-7074";
+                    fireFighters.Text = "Fire Fighters: 2645-7512";
+                    redCross.Text = "Red Cross: 2645-6128";
+                    waterService.Text = "Water Service: 2645-5502";
+                    toxicologist.Text = "Center of Toxicology: 2233-1028";
+                    CPI.Text = "CPI: 2645-5441";
+                    friendsSchool.Text = "Friends School: 2645-5530";
                     break;
                 case "s":
                     titleLabel.Text = "Spanish Contact Info";
-                    police.Text = "Spanish police: xxx-xxx-xxxx";
-                    fireFighters.Text = "Spanish fireFighters: xxx-xxx-xxxx";
-                    redCross.Text = "Spanish redCross: xxx-xxx-xxxx";
-                    CPI.Text = "Spanish CPI: xxx-xxx-xxxx";
-                    friendsSchool.Text = "Spanish friendsSchool: xxx-xxx-xxxx";
+                    emergency.Text = "Spanish Emergency: 911";
+                    police.Text = "Spanish Police: 2645-7074";
+                    fireFighters.Text = "Spanish Fire Fighters: 2645-7512";
+                    redCross.Text = "Spanish Red Cross: 2645-6128";
+                    waterService.Text = "Spanish Water Service: 2645-5502";
+                    toxicologist.Text = "Spanish Center of Toxicology: 2233-1028";
+                    CPI.Text = "Spanish CPI: 2645-5441";
+                    friendsSchool.Text = "Spanish Friends School: 2645-5530";
                     break;
                 case "f":
                     titleLabel.Text = "French Contact Info";
-                    police.Text = "French police: xxx-xxx-xxxx";
-                    fireFighters.Text = "French fireFighters: xxx-xxx-xxxx";
-                    redCross.Text = "French redCross: xxx-xxx-xxxx";
-                    CPI.Text = "French CPI: xxx-xxx-xxxx";
-                    friendsSchool.Text = "French friendsSchool: xxx-xxx-xxxx";
+                    emergency.Text = "French Emergency: 911";
+                    police.Text = "French Police: 2645-7074";
+                    fireFighters.Text = "French Fire Fighters: 2645-7512";
+                    redCross.Text = "French Red Cross: 2645-6128";
+                    waterService.Text = "French Water Service: 2645-5502";
+                    toxicologist.Text = "French Center of Toxicology: 2233-1028";
+                    CPI.Text = "French CPI: 2645-5441";
+                    friendsSchool.Text = "French Friends School: 2645-5530";
                     break;
                 case "g":
                     titleLabel.Text = "German Contact Info";
-                    police.Text = "German police: xxx-xxx-xxxx";
-                    fireFighters.Text = "German fireFighters: xxx-xxx-xxxx";
-                    redCross.Text = "German redCross: xxx-xxx-xxxx";
-                    CPI.Text = "German CPI: xxx-xxx-xxxx";
-                    friendsSchool.Text = "German friendsSchool: xxx-xxx-xxxx";
+                    emergency.Text = "German Emergency: 911";
+                    police.Text = "German Police: 2645-7074";
+                    fireFighters.Text = "German Fire Fighters: 2645-7512";
+                    redCross.Text = "German Red Cross: 2645-6128";
+                    waterService.Text = "German Water Service: 2645-5502";
+                    toxicologist.Text = "German Center of Toxicology: 2233-1028";
+                    CPI.Text = "German CPI: 2645-5441";
+                    friendsSchool.Text = "German Friends School: 2645-5530";
                     break;
                 default:
                     break;

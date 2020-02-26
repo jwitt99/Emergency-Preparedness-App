@@ -41,11 +41,11 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    landslide.Text = "landslide";
-                    flood.Text = "flood";
-                    fire.Text = "fire";
-                    fallenObject.Text = "fallenObject";
-                    contactInfo.Text = "contact info";
+                    landslide.Text = "Landslide";
+                    flood.Text = "Flood";
+                    fire.Text = "Fire";
+                    fallenObject.Text = "Fallen Object";
+                    contactInfo.Text = "Contact info";
                     changeLang.Text = "Change Language";
                     changeLoc.Text = "Change Location";
                     break;
@@ -85,7 +85,7 @@ namespace emergencyPreparednessApp
                     switch (App.Lang)
                     {
                         case "e":
-                            titleLabel.Text = "earthquake";
+                            titleLabel.Text = "Earthquake";
                             break;
                         case "s":
                             titleLabel.Text = "Spanish earthquake";
@@ -106,7 +106,7 @@ namespace emergencyPreparednessApp
                     switch (App.Lang)
                     {
                         case "e":
-                            titleLabel.Text = "tropical storm";
+                            titleLabel.Text = "Tropical storm";
                             break;
                         case "s":
                             titleLabel.Text = "Spanish tropical storm";
@@ -127,7 +127,7 @@ namespace emergencyPreparednessApp
                     switch (App.Lang)
                     {
                         case "e":
-                            titleLabel.Text = "volcano";
+                            titleLabel.Text = "Volcano";
                             break;
                         case "s":
                             titleLabel.Text = "Spanish volcano";

@@ -52,21 +52,19 @@ namespace emergencyPreparednessApp
                     landslide.Text = "landslide";
                     flood.Text = "flood";
                     fire.Text = "fire";
-                    fallenObject.Text = "Fallen Object";
                     label2.Text = "Natural Disasters";
-                    tropicalStorm.Text = "tropicalStorm";
-                    earthquake.Text = "earthquake";
+                    tropicalStorm.Text = "Tropical Storm";
+                    earthquake.Text = "Earthquake";
                     volcanicActivity.Text = "Secondary Effects from Volcanic Activity";
                     changeLang.Text = "Change Language";
                     changeLoc.Text = "Change Location";
-                    contactInfo.Text = "contact info";
+                    contactInfo.Text = "Contact info";
                     break;
                 case "s":
                     label1.Text = "Spanish label1";
                     landslide.Text = "Spanish landslide";
                     flood.Text = "Spanish flood";
                     fire.Text = "Spanish fire";
-                    fallenObject.Text = "Spanish Fallen Object";
                     label2.Text = "Spanish label2";
                     tropicalStorm.Text = "Spanish tropicalStorm";
                     earthquake.Text = "Spanish earthquake";
@@ -80,7 +78,6 @@ namespace emergencyPreparednessApp
                     landslide.Text = "French landslide";
                     flood.Text = "French flood";
                     fire.Text = "French fire";
-                    fallenObject.Text = "French Fallen Object";
                     label2.Text = "French label2";
                     tropicalStorm.Text = "French tropicalStorm";
                     earthquake.Text = "French earthquake";
@@ -94,7 +91,6 @@ namespace emergencyPreparednessApp
                     landslide.Text = "German landslide";
                     flood.Text = "German flood";
                     fire.Text = "German fire";
-                    fallenObject.Text = "German Fallen Object";
                     label2.Text = "German label2";
                     tropicalStorm.Text = "German tropicalStorm";
                     earthquake.Text = "German earthquake";

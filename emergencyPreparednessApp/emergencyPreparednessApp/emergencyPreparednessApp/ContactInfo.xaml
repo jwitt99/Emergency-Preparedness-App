@@ -10,9 +10,13 @@
         <ScrollView>
             <StackLayout>
                 <Label HorizontalOptions="Center" x:Name="titleLabel" Text="Contact info:"/>
-                <Label FontSize="25" HorizontalOptions="Start" x:Name="police" Text="Police: xxx-xxx-xxxx"/>
-                <Label FontSize="25" HorizontalOptions="Start" x:Name="fireFighters" Text="Fire Fighters: xxx-xxx-xxxx"/>
-                <Label FontSize="25" HorizontalOptions="Start" x:Name="redCross" Text="Red Cross: xxx-xxx-xxxx"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="emergency" Text="Emergency: 911"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="police" Text="Police: 2645-7074"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="fireFighters" Text="Fire Fighters: 2645-7512"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="waterService" Text="Water Service: 2645-5502"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="clinic" Text="Health Clinic: 2645-7778"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="toxicologist" Text="Center of Toxicologist: 2233-1028"/>
+                <Label FontSize="25" HorizontalOptions="Start" x:Name="redCross" Text="Red Cross: xxxx"/>
                 <Label FontSize="25" HorizontalOptions="Start" x:Name="CPI" Text="CPI: xxx-xxx-xxxx"/>
                 <Label FontSize="25" HorizontalOptions="Start" x:Name="friendsSchool" Text="Friends School: xxx-xxx-xxxx"/>
                 <Button VerticalOptions="EndAndExpand"  HorizontalOptions="End" BorderRadius="20" BorderWidth="2" WidthRequest="100" FontSize="Large" Text="Back" TextColor="AntiqueWhite" BackgroundColor="#0F7B79" Clicked="BackButton_OnClicked"/>

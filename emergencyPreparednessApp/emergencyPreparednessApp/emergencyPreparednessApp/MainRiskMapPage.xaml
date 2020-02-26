@@ -17,8 +17,7 @@
                 <Button StyleId="landslide" x:Name="landslide" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Landslide" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RiskButton_OnClicked"/>
                 <Button StyleId="flood" x:Name="flood" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Flood" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RiskButton_OnClicked"/>
                 <Button StyleId="fire" x:Name="fire" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Fire" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RiskButton_OnClicked"/>
-                <Button StyleId="fallenObject" x:Name="fallenObject" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Fallen object" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2cc956" Clicked="RiskButton_OnClicked"/>
-                <Label Text="Natural disasters" 
+                <Label Margin="50,0,0,0" Text="Natural disasters" 
                     HorizontalOptions="Start" x:Name="label2" />
                 <Button StyleId="tropicalStorm" x:Name="tropicalStorm" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Tropical Storm" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#823007" Clicked="NatDisButton_OnClicked"/>
                 <Button StyleId="earthquake" x:Name="earthquake" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Earthquake" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#823007" Clicked="NatDisButton_OnClicked"/>

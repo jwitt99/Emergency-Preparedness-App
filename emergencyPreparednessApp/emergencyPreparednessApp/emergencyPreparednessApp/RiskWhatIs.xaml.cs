@@ -10,16 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace emergencyPreparednessApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Risk : ContentPage
+    public partial class RiskWhatIs : ContentPage
     {
-        public Risk()
+        public RiskWhatIs()
         {
             InitializeComponent();
         }
-        private async void btnWhatIs_OnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RiskWhatIs());
-        }
+
         private async void RegionButton_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LocationPage());
@@ -34,15 +31,6 @@ namespace emergencyPreparednessApp
             await Navigation.PushAsync(new MainPage());
         }
 
-        private async void btnWhatDo_OnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RiskWhatDo());
-        }
-
-        private async void btnPrepare_OnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RiskPrepare());
-        }
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -51,29 +39,21 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    btnWhatDo.Text = "What do you do?";
-                    btnPrepare.Text = "How do you prepare?";
                     changeLang.Text = "changeLang";
                     changeLoc.Text = "changeLoc";
                     contactInfo.Text = "contact info";
                     break;
                 case "s":
-                    btnWhatDo.Text = "Spanish What do you do?";
-                    btnPrepare.Text = "Spanish How do you prepare?";
                     changeLang.Text = "Spanish changeLang";
                     changeLoc.Text = "Spanish changeLoc";
                     contactInfo.Text = "Spanish contact info";
                     break;
                 case "f":
-                    btnWhatDo.Text = "French What do you do?";
-                    btnPrepare.Text = "French How do you prepare?";
                     changeLang.Text = "French changeLang";
                     changeLoc.Text = "French changeLoc";
                     contactInfo.Text = "French contact info";
                     break;
                 case "g":
-                    btnWhatDo.Text = "German What do you do?";
-                    btnPrepare.Text = "German How do you prepare?";
                     changeLang.Text = "German changeLang";
                     changeLoc.Text = "German changeLoc";
                     contactInfo.Text = "German contact info";
@@ -82,7 +62,8 @@ namespace emergencyPreparednessApp
                     break;
             }
 
-            switch (App.Risk) {
+            switch (App.Risk)
+            {
                 case "landslide":
                     landslideText();
                     break;
@@ -101,20 +82,18 @@ namespace emergencyPreparednessApp
             }
         }
 
-        private void landslideText() {
+        private void landslideText()
+        {
             switch (App.Lang)
             {
                 case "e":
-                    titleLabel.Text = "Landslide";
+                    whatIs.Text = "Landslides are a collection of fast-moving mud and debris flowing rapidly through an area. It starts off as a bunch of loose soil that becomes disturbed by wind or rain, and gravity starts to make it go faster. It can quickly gain a lot of force and will start picking up large branches, loose pavement, trees, and buildings. ";
                     break;
                 case "s":
-                    titleLabel.Text = "spanish landslide";
                     break;
                 case "f":
-                    titleLabel.Text = "french landslide";
                     break;
                 case "g":
-                    titleLabel.Text = "german landslide";
                     break;
                 default:
                     break;
@@ -125,16 +104,13 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    titleLabel.Text = "Flood";
+                    whatIs.Text = "Flash floods are caused by a lot of water building up in an area that has loose soil. When enough water builds up in the area, the soil comes loose and all the water floods the lower areas at once.";
                     break;
                 case "s":
-                    titleLabel.Text = "spanish flood";
                     break;
                 case "f":
-                    titleLabel.Text = "french flood";
                     break;
                 case "g":
-                    titleLabel.Text = "german flood";
                     break;
                 default:
                     break;
@@ -146,20 +122,18 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    titleLabel.Text = "Fire Object";
+                    whatIs.Text = "English Fire";
                     break;
                 case "s":
-                    titleLabel.Text = "spanish Fire";
                     break;
                 case "f":
-                    titleLabel.Text = "french Fire";
                     break;
                 case "g":
-                    titleLabel.Text = "german Fire";
                     break;
                 default:
                     break;
             }
+
         }
 
         private void fallenObjectText()
@@ -167,16 +141,13 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    titleLabel.Text = "Fallen Object";
+                    whatIs.Text = "English fallen object";
                     break;
                 case "s":
-                    titleLabel.Text = "spanish fallen object";
                     break;
                 case "f":
-                    titleLabel.Text = "french fallen object";
                     break;
                 case "g":
-                    titleLabel.Text = "german fallen object";
                     break;
                 default:
                     break;

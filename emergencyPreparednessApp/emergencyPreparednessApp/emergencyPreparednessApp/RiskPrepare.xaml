@@ -4,18 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="emergencyPreparednessApp.Risk"
+             x:Class="emergencyPreparednessApp.RiskPrepare"
              BackgroundColor="#11401e">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Image x:Name="img" Source="bg5" VerticalOptions="Start"
-               HorizontalOptions="CenterAndExpand" HeightRequest="300" Aspect="Fill"></Image>
-                <Label Text="Fallen Objects" 
-                         HorizontalOptions="CenterAndExpand" x:Name="titleLabel" HorizontalTextAlignment="Center" />
-                <Button x:Name="btnWhatIs" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="What is it?" Clicked="btnWhatIs_OnClicked" />
-                <Button x:Name="btnWhatDo" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="What do you do?" Clicked="btnWhatDo_OnClicked" />
-                <Button x:Name="btnPrepare" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="How do you prepare?" Clicked="btnPrepare_OnClicked" />
+                <Button  x:Name="btnPrepare" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="How do you prepare?" />
+                <Button x:Name="btnResident" BackgroundColor="Green" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="null" Clicked="btnResident_OnClicked" />
+                <StackLayout x:Name="residentInfo" IsVisible="False">
+                    <!-- stack layout populated in .cs -->
+                </StackLayout>
+                <Button x:Name="btnVisitor" BackgroundColor="Green" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="null" Clicked="btnVisitor_OnClicked" />
+                <StackLayout x:Name="visitorInfo" IsVisible="False">
+                    <!-- stack layout populated in .cs -->
+                </StackLayout>
                 <Label HeightRequest="12"></Label>
                 <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" BackgroundColor="Black" Padding="10" >
                     <Button x:Name="changeLang" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Language" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="LanguageButton_OnClicked" StyleId="f" />

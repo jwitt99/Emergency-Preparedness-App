@@ -11,7 +11,7 @@
     <ScrollView>
         <StackLayout>
             <Image WidthRequest="150" HeightRequest="150" Source="cneLogo"></Image>
-            <Label 
+            <Label
                HorizontalOptions="Center" 
                 x:Name="change">
                 <Label.Text>¡Bienvenido!</Label.Text>
