@@ -13,10 +13,10 @@
                 <Label Text="What region are you from?"  HorizontalTextAlignment="Center"
                     HorizontalOptions="CenterAndExpand"    
                     x:Name="label1"/>
-                <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Monte Verde" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
-                <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Santa Elena" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
-                <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="San Luis" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
-                <Button HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Cerro Plano" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
+                <Button StyleId="monteVerde" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Monte Verde" FontSize="Large" TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
+                <Button StyleId="santaElena" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Santa Elena" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
+                <Button StyleId="sanLuis" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="San Luis" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
+                <Button StyleId="cerroPlano" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Cerro Plano" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#2D7F19" Clicked="RegionButton_OnClicked" />
                 <Button x:Name="notSureButton" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="2" WidthRequest="200" Text="Not sure" FontSize="Large"  TextColor="AntiqueWhite" BackgroundColor="#FF1111" Clicked="NotSureRegionButton_OnClicked" />
                 <Label HeightRequest="12"></Label>
                 <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" BackgroundColor="Black" Padding="10">

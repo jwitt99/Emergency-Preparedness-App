@@ -39,8 +39,8 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    changeLang.Text = "changeLang";
-                    changeLoc.Text = "changeLoc";
+                    changeLang.Text = "Change language";
+                    changeLoc.Text = "change location";
                     contactInfo.Text = "contact info";
                     break;
                 case "s":
@@ -62,7 +62,7 @@ namespace emergencyPreparednessApp
                     break;
             }
 
-            switch (App.Risk)
+            switch (App.Emergency)
             {
                 case "landslide":
                     landslideText();
@@ -73,11 +73,17 @@ namespace emergencyPreparednessApp
                 case "fire":
                     fireText();
                     break;
-                case "fallenObject":
-                    fallenObjectText();
+                case "tropicalStorm":
+                    tropicalStormText();
+                    break;
+                case "volcano":
+                    volcanoText();
+                    break;
+                case "earthquake":
+                    earthquakeText();
                     break;
                 default:
-                    DisplayAlert("something went wrong", "Yes", "yes");
+                    DisplayAlert("something went wrong with App.Emergency", "Yes", "yes");
                     break;
             }
         }
@@ -122,7 +128,7 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
-                    whatIs.Text = "English Fire";
+                    whatIs.Text = "With global temperatures rising, there are more and more opportunities for dry weather and high temperatures to create forest fires. These forest fires lead to the rapid destruction of large areas";
                     break;
                 case "s":
                     break;
@@ -136,12 +142,12 @@ namespace emergencyPreparednessApp
 
         }
 
-        private void fallenObjectText()
+        private void tropicalStormText()
         {
             switch (App.Lang)
             {
                 case "e":
-                    whatIs.Text = "English fallen object";
+                    whatIs.Text = "Tropical storms are storms that are formed over tropical seas due to different temperatures in the atmosphere. They are extremely powerful and can cause landslides and flash floods due to their high winds and heavy rains.";
                     break;
                 case "s":
                     break;
@@ -153,5 +159,41 @@ namespace emergencyPreparednessApp
                     break;
             }
         }
+
+        private void volcanoText() {
+            switch (App.Lang)
+            {
+                case "e":
+                    whatIs.Text = "The closest volcano to Monteverde is the Arenal Volcano. While its eruption would not have direct effects on Monteverde, the volcano’s ashes do have a high probability of reaching the region and they come with several risks. The highest risks are respiratory issues and damage to agriculture";
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void earthquakeText()
+        {
+            switch (App.Lang)
+            {
+                case "e":
+                    whatIs.Text = "Earthquakes are caused by plates in the Earth’s crust moving. Earthquakes occur multiple times per year in Monteverde, and they can lead to landslides and falling objects";
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }

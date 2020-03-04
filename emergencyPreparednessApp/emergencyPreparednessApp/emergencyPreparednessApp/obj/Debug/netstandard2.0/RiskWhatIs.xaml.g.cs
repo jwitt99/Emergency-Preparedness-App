@@ -8,19 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("emergencyPreparednessApp.LocationPage.xaml", "LocationPage.xaml", typeof(global::emergencyPreparednessApp.LocationPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("emergencyPreparednessApp.RiskWhatIs.xaml", "RiskWhatIs.xaml", typeof(global::emergencyPreparednessApp.RiskWhatIs))]
 
 namespace emergencyPreparednessApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("LocationPage.xaml")]
-    public partial class LocationPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("RiskWhatIs.xaml")]
+    public partial class RiskWhatIs : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label label1;
+        private global::Xamarin.Forms.Button btnWhatIs;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button notSureButton;
+        private global::Xamarin.Forms.Label whatIs;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button changeLang;
@@ -29,12 +29,16 @@ namespace emergencyPreparednessApp {
         private global::Xamarin.Forms.Button contactInfo;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button changeLoc;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LocationPage));
-            label1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "label1");
-            notSureButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "notSureButton");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(RiskWhatIs));
+            btnWhatIs = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnWhatIs");
+            whatIs = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "whatIs");
             changeLang = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "changeLang");
             contactInfo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "contactInfo");
+            changeLoc = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "changeLoc");
         }
     }
 }

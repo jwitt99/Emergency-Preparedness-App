@@ -46,6 +46,23 @@ namespace emergencyPreparednessApp
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            switch (App.Loc)
+            {
+                case "monteVerde":
+                    img.Source = "monteVerde";
+                    break;
+                case "cerroPlano":
+                    img.Source = "cerroPlano";
+                    break;
+                case "santaElena":
+                    img.Source = "santaElena";
+                    break;
+                case "sanLuis":
+                    img.Source = "sanLuis";
+                    break;
+                default:
+                    break;
+            }
 
             // switch language on universal buttons and labels for all risks
             switch (App.Lang)
@@ -65,11 +82,11 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "Spanish contact info";
                     break;
                 case "f":
-                    btnWhatDo.Text = "French What do you do?";
-                    btnPrepare.Text = "French How do you prepare?";
-                    changeLang.Text = "French changeLang";
-                    changeLoc.Text = "French changeLoc";
-                    contactInfo.Text = "French contact info";
+                    btnWhatDo.Text = "Que faites-vous en cas d’urgence?";
+                    btnPrepare.Text = "Comment preparez-vous?";
+                    changeLang.Text = "Changez de langue";
+                    changeLoc.Text = "Changez de lieu";
+                    contactInfo.Text = "Coordonnées";
                     break;
                 case "g":
                     btnWhatDo.Text = "German What do you do?";
@@ -82,7 +99,7 @@ namespace emergencyPreparednessApp
                     break;
             }
 
-            switch (App.Risk) {
+            switch (App.Emergency) {
                 case "landslide":
                     landslideText();
                     break;
@@ -91,9 +108,6 @@ namespace emergencyPreparednessApp
                     break;
                 case "fire":
                     fireText();
-                    break;
-                case "fallenObject":
-                    fallenObjectText();
                     break;
                 default:
                     DisplayAlert("something went wrong", "Yes", "yes");
@@ -111,7 +125,7 @@ namespace emergencyPreparednessApp
                     titleLabel.Text = "spanish landslide";
                     break;
                 case "f":
-                    titleLabel.Text = "french landslide";
+                    titleLabel.Text = "Glissement de terre";
                     break;
                 case "g":
                     titleLabel.Text = "german landslide";
@@ -131,7 +145,7 @@ namespace emergencyPreparednessApp
                     titleLabel.Text = "spanish flood";
                     break;
                 case "f":
-                    titleLabel.Text = "french flood";
+                    titleLabel.Text = "Inondation";
                     break;
                 case "g":
                     titleLabel.Text = "german flood";
@@ -143,6 +157,7 @@ namespace emergencyPreparednessApp
 
         private void fireText()
         {
+
             switch (App.Lang)
             {
                 case "e":
@@ -152,31 +167,10 @@ namespace emergencyPreparednessApp
                     titleLabel.Text = "spanish Fire";
                     break;
                 case "f":
-                    titleLabel.Text = "french Fire";
+                    titleLabel.Text = "Feu";
                     break;
                 case "g":
                     titleLabel.Text = "german Fire";
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void fallenObjectText()
-        {
-            switch (App.Lang)
-            {
-                case "e":
-                    titleLabel.Text = "Fallen Object";
-                    break;
-                case "s":
-                    titleLabel.Text = "spanish fallen object";
-                    break;
-                case "f":
-                    titleLabel.Text = "french fallen object";
-                    break;
-                case "g":
-                    titleLabel.Text = "german fallen object";
                     break;
                 default:
                     break;

@@ -74,6 +74,8 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
+                    intro.Text = "Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared";
+                    btnPrepare.Text = "How do you prepare?";
                     btnResident.Text = "Resident";
                     btnVisitor.Text = "Visitor";
                     changeLang.Text = "Change Language";
@@ -81,6 +83,8 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "Contact info";
                     break;
                 case "s":
+                    intro.Text = "SPanish Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared";
+                    btnPrepare.Text = "Spanish How do you prepare?";
                     btnResident.Text = "Spanish btnResident";
                     btnVisitor.Text = "Spanish btnVisitor";
                     changeLang.Text = "Spanish changeLang";
@@ -88,6 +92,8 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "Spanish contact info";
                     break;
                 case "f":
+                    intro.Text = "French Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared";
+                    btnPrepare.Text = "French How do you prepare?";
                     btnResident.Text = "French btnResident";
                     btnVisitor.Text = "French btnVisitor";
                     changeLang.Text = "French changeLang";
@@ -95,6 +101,8 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "French contact info";
                     break;
                 case "g":
+                    intro.Text = "German Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared";
+                    btnPrepare.Text = "German How do you prepare?";
                     btnResident.Text = "German btnResident";
                     btnVisitor.Text = "German btnVisitor";
                     changeLang.Text = "German changeLang";
@@ -105,7 +113,7 @@ namespace emergencyPreparednessApp
                     break;
             }
 
-            switch (App.Risk)
+            switch (App.Emergency)
             {
                 case "landslide":
                     landslideText();
@@ -116,8 +124,14 @@ namespace emergencyPreparednessApp
                 case "fire":
                     fireText();
                     break;
-                case "fallenObject":
-                    fallenObjectText();
+                case "tropicalStorm":
+                    tropicalStormText();
+                    break;
+                case "volcano":
+                    volcanoText();
+                    break;
+                case "earthquake":
+                    earthquakeText();
                     break;
                 default:
                     DisplayAlert("something went wrong", "Yes", "yes");
@@ -125,78 +139,66 @@ namespace emergencyPreparednessApp
             }
         }
 
-        string labelTxt = "<Label FontSize=\"20\" Margin=\"10,0,0,0\"/>";
-        string labelIndentTxt = "<Label FontSize=\"20\" Margin=\"60,0,0,0\"/>";
-        string labelIndent2Txt = "<Label FontSize=\"20\" Margin=\"120,0,0,0\"/>";
+        string labelTxt = "<Label FontSize=\"20\" Margin=\"10,0,0,20\"/>";
+        string labelIndentTxt = "<Label FontSize=\"20\" Margin=\"60,0,0,20\"/>";
+        string labelIndent2Txt = "<Label FontSize=\"20\" Margin=\"120,0,0,20\"/>";
         private void landslideText()
         {
             //Resident
             switch (App.Lang)
             {
                 case "e":
-                    Label label = new Label().LoadFromXaml(labelTxt);
-                    label.Text = "Evacuate if:";
-                    residentInfo.Children.Add(label);
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "Check if you live in an area of risk ";
+                    residentInfo.Children.Add(label1);
                     Label label2 = new Label().LoadFromXaml(labelIndentTxt);
-                    label2.Text = "-The CNE announces a Red Alert";
+                    label2.Text = "Be familiar with the level  of risk in your area. You can view a landslide risk map in the previous page.";
                     residentInfo.Children.Add(label2);
-                    Label label3 = new Label().LoadFromXaml(labelIndentTxt);
-                    label3.Text = "-You live in a high risk area and you hear there is a high possibility of: a tropical storm, earthquake";
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "Stay informed with the status of storms and other natural disasters, as well as the change in levels of risk through the news and social media. Some of the best methods for staying informed are: ";
                     residentInfo.Children.Add(label3);
                     Label label4 = new Label().LoadFromXaml(labelIndentTxt);
-                    label4.Text = "-Do Not Forget Your Pets! If you have time, make sure they are safe as well";
+                    label4.Text = "TV";
                     residentInfo.Children.Add(label4);
-                    Label label5 = new Label().LoadFromXaml(labelTxt);
-                    label5.Text = "Where to evacuate?";
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "Facebook";
                     residentInfo.Children.Add(label5);
                     Label label6 = new Label().LoadFromXaml(labelIndentTxt);
-                    label6.Text = "-If there is a Red Alert or the police force has asked you to evacuate, go to the Monteverde Institute or the Friends School depending on your area";
+                    label6.Text = "Radio";
                     residentInfo.Children.Add(label6);
                     Label label7 = new Label().LoadFromXaml(labelIndentTxt);
-                    label7.Text = "-If there has not been an official order of evacuation, stay in the home of a friend or family member who is outside the area of risk";
+                    label7.Text = "WhatsApp";
                     residentInfo.Children.Add(label7);
                     Label label8 = new Label().LoadFromXaml(labelTxt);
-                    label8.Text = "If you have not evacuated:";
+                    label8.Text = "Have a preparedness kit - here are some of our recommendations for its contents";
                     residentInfo.Children.Add(label8);
                     Label label9 = new Label().LoadFromXaml(labelIndentTxt);
-                    label9.Text = "-Pay close attention to what is happening in the news and social media. Some of the best methods for staying informed are: ";
+                    label9.Text = "-Emergency Heat Blankets ";
                     residentInfo.Children.Add(label9);
-                    Label label10 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label10.Text = "TV";
+                    Label label10 = new Label().LoadFromXaml(labelIndentTxt);
+                    label10.Text = "-Portable Radio";
                     residentInfo.Children.Add(label10);
-                    Label label11 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label11.Text = "Facebook";
+                    Label label11 = new Label().LoadFromXaml(labelIndentTxt);
+                    label11.Text = "-Batteries ";
                     residentInfo.Children.Add(label11);
-                    Label label12 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label12.Text = "Radio";
+                    Label label12 = new Label().LoadFromXaml(labelIndentTxt);
+                    label12.Text = "-Flash Light/Candles/Matches ";
                     residentInfo.Children.Add(label12);
-                    Label label13 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label13.Text = "WhatsApp";
+                    Label label13 = new Label().LoadFromXaml(labelIndentTxt);
+                    label13.Text = "-Multitool ";
                     residentInfo.Children.Add(label13);
                     Label label14 = new Label().LoadFromXaml(labelIndentTxt);
-                    label14.Text = "-Have your things ready to evacuate, some of the things you should consider include in your bag are:";
+                    label14.Text = "-Solar Panel Phone Charger ";
                     residentInfo.Children.Add(label14);
-                    Label label15 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label15.Text = "Important documents";
+                    Label label15 = new Label().LoadFromXaml(labelTxt);
+                    label15.Text = "Make sure you know where the following are: ";
                     residentInfo.Children.Add(label15);
-                    Label label16 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label16.Text = "Phones and phone chargers";
+                    Label label16 = new Label().LoadFromXaml(labelIndentTxt);
+                    label16.Text = "-Important Documents ";
                     residentInfo.Children.Add(label16);
-                    Label label17 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label17.Text = "Granola bars and other food";
+                    Label label17 = new Label().LoadFromXaml(labelIndentTxt);
+                    label17.Text = "-Emergency Contacts ";
                     residentInfo.Children.Add(label17);
-                    Label label18 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label18.Text = "Flash lights";
-                    residentInfo.Children.Add(label18);
-                    Label label19 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label19.Text = "Portable radio";
-                    residentInfo.Children.Add(label19);
-                    Label label20 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label20.Text = "Money";
-                    residentInfo.Children.Add(label20);
-                    Label label21 = new Label().LoadFromXaml(labelIndent2Txt);
-                    label21.Text = "Medicine";
-                    residentInfo.Children.Add(label21);
                     break;
                 case "s":
                     break;
@@ -212,29 +214,20 @@ namespace emergencyPreparednessApp
             {
                 case "e":
                     Label label1 = new Label().LoadFromXaml(labelTxt);
-                    label1.Text = "Avoid areas of risk, which you can view on the landslide risk map in the previous page";
-                    residentInfo.Children.Add(label1);
+                    label1.Text = "If you are a homestay, show your family the “How to Prepare” section for residents";
+                    visitorInfo.Children.Add(label1);
                     Label label2 = new Label().LoadFromXaml(labelTxt);
-                    label2.Text = "If you are a homestay, pay close attention to your family’s and institution’s instructions";
-                    residentInfo.Children.Add(label2);
+                    label2.Text = "If you are staying in a hotel, make sure you pay attention to any information given to you by the staff";
+                    visitorInfo.Children.Add(label2);
                     Label label3 = new Label().LoadFromXaml(labelTxt);
-                    label3.Text = "If you are in a hotel, pay close attention to what staff members in the hotels you are staying at are saying ";
-                    residentInfo.Children.Add(label3);
-                    Label label4 = new Label().LoadFromXaml(labelTxt);
-                    label4.Text = "If you are staying in an Airbnb, talk to your landowner:";
-                    residentInfo.Children.Add(label4);
-                    Label label5 = new Label().LoadFromXaml(labelTxt);
-                    label5.Text = "";
-                    residentInfo.Children.Add(label5);
-                    Label label6 = new Label().LoadFromXaml(labelTxt);
-                    label6.Text = "";
-                    residentInfo.Children.Add(label6);
-                    Label label7 = new Label().LoadFromXaml(labelTxt);
-                    label7.Text = "";
-                    residentInfo.Children.Add(label7);
-                    Label label8 = new Label().LoadFromXaml(labelTxt);
-                    label8.Text = "";
-                    residentInfo.Children.Add(label8);
+                    label3.Text = "If you are staying in an Airbnb, talk to your landowner";
+                    visitorInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "-Ask them if they have an emergency plan ";
+                    visitorInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "-If they say no, tell the landowner that there is an emergency plan in place and that they should look into it";
+                    visitorInfo.Children.Add(label5);
                     break;
                 case "s":
                     break;
@@ -249,9 +242,85 @@ namespace emergencyPreparednessApp
         }
         private void floodText()
         {
+            //Resident
             switch (App.Lang)
             {
                 case "e":
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "Stay informed with the status of storms and other natural disasters, as well as the change in levels of risk through the news and social media. Some of the best methods for staying informed are: ";
+                    residentInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "TV";
+                    residentInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "Facebook";
+                    residentInfo.Children.Add(label5);
+                    Label label6 = new Label().LoadFromXaml(labelIndentTxt);
+                    label6.Text = "Radio";
+                    residentInfo.Children.Add(label6);
+                    Label label7 = new Label().LoadFromXaml(labelIndentTxt);
+                    label7.Text = "WhatsApp";
+                    residentInfo.Children.Add(label7);
+                    Label label8 = new Label().LoadFromXaml(labelTxt);
+                    label8.Text = "Have a preparedness kit - here are some of our recommendations for its contents";
+                    residentInfo.Children.Add(label8);
+                    Label label9 = new Label().LoadFromXaml(labelIndentTxt);
+                    label9.Text = "-Emergency Heat Blankets ";
+                    residentInfo.Children.Add(label9);
+                    Label label10 = new Label().LoadFromXaml(labelIndentTxt);
+                    label10.Text = "-Portable Radio";
+                    residentInfo.Children.Add(label10);
+                    Label label11 = new Label().LoadFromXaml(labelIndentTxt);
+                    label11.Text = "-Batteries ";
+                    residentInfo.Children.Add(label11);
+                    Label label12 = new Label().LoadFromXaml(labelIndentTxt);
+                    label12.Text = "-Flash Light/Candles/Matches ";
+                    residentInfo.Children.Add(label12);
+                    Label label13 = new Label().LoadFromXaml(labelIndentTxt);
+                    label13.Text = "-Multitool ";
+                    residentInfo.Children.Add(label13);
+                    Label label14 = new Label().LoadFromXaml(labelIndentTxt);
+                    label14.Text = "-Solar Panel Phone Charger ";
+                    residentInfo.Children.Add(label14);
+                    Label label15 = new Label().LoadFromXaml(labelTxt);
+                    label15.Text = "Make sure you know where the following are: ";
+                    residentInfo.Children.Add(label15);
+                    Label label16 = new Label().LoadFromXaml(labelIndentTxt);
+                    label16.Text = "-Important Documents ";
+                    residentInfo.Children.Add(label16);
+                    Label label17 = new Label().LoadFromXaml(labelIndentTxt);
+                    label17.Text = "-Emergency Contacts ";
+                    residentInfo.Children.Add(label17);
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+
+            //Visitor
+            switch (App.Lang)
+            {
+                case "e":
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "If you are a homestay, show your family the “How to Prepare” section for residents";
+                    visitorInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "If you are staying in a hotel, make sure you pay attention to any information given to you by the staff";
+                    visitorInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "If you are staying in an Airbnb, talk to your landowner";
+                    visitorInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "-Ask them if they have an emergency plan ";
+                    visitorInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "-If they say no, tell the landowner that there is an emergency plan in place and that they should look into it";
+                    visitorInfo.Children.Add(label5);
                     break;
                 case "s":
                     break;
@@ -266,9 +335,23 @@ namespace emergencyPreparednessApp
 
         private void fireText()
         {
+            //Resident 
             switch (App.Lang)
             {
                 case "e":
+                    intro.Text = "Every second counts during a fire. In order to reduce the risks you could face in case of an emergency, please read our following recommendations:";
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "Keep doorways clear - allow for quick evacuation ";
+                    residentInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "Talk to your family members, particularly children about fire safety and the steps they should follow during these emergencies";
+                    residentInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "Save the firefighter’s number on your phone for quick access: 2645-7512";
+                    residentInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelTxt);
+                    label4.Text = "Practice safe cooking habits";
+                    residentInfo.Children.Add(label4);
                     break;
                 case "s":
                     break;
@@ -279,14 +362,131 @@ namespace emergencyPreparednessApp
                 default:
                     break;
             }
-
+            //Visitor
+            switch (App.Lang)
+            {
+                case "e":
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "Keep doorways clear - allow for quick evacuation ";
+                    visitorInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "Talk to your family members, particularly children about fire safety and the steps they should follow during these emergencies";
+                    visitorInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "Save the firefighter’s number on your phone for quick access: 2645-7512";
+                    visitorInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelTxt);
+                    label4.Text = "Practice safe cooking habits";
+                    visitorInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelTxt);
+                    label5.Text = "If you are a homestay, show your family the “How to Prepare” section  for residents";
+                    visitorInfo.Children.Add(label5);
+                    Label label6 = new Label().LoadFromXaml(labelTxt);
+                    label6.Text = "If you are staying in a hotel, make sure you pay attention to any information given to you by the staff";
+                    visitorInfo.Children.Add(label6);
+                    Label label7 = new Label().LoadFromXaml(labelTxt);
+                    label7.Text = "If you are staying in an Airbnb, talk to your landowner";
+                    visitorInfo.Children.Add(label7);
+                    Label label8 = new Label().LoadFromXaml(labelIndentTxt);
+                    label8.Text = "Ask them if they have an emergency plan ";
+                    visitorInfo.Children.Add(label8);
+                    Label label9 = new Label().LoadFromXaml(labelIndentTxt);
+                    label9.Text = "If they say no, tell the landowner that there is an emergency plan in place and that they should look into it ";
+                    visitorInfo.Children.Add(label9);
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
         }
 
-        private void fallenObjectText()
+        private void tropicalStormText()
         {
+            //Resident 
             switch (App.Lang)
             {
                 case "e":
+                    intro.Text = "Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared:";
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "Check if you live in an area of risk ";
+                    residentInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "Stay informed with the status of storms and other natural disasters, as well as the change in levels of risk through the news and social media. Some of the best methods for staying informed are: ";
+                    residentInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelIndentTxt);
+                    label3.Text = "-TV";
+                    residentInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "-Facebook";
+                    residentInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "-Radio";
+                    residentInfo.Children.Add(label5);
+                    Label label6 = new Label().LoadFromXaml(labelIndentTxt);
+                    label6.Text = "-WhatsApp";
+                    residentInfo.Children.Add(label6);
+                    Label label8 = new Label().LoadFromXaml(labelTxt);
+                    label8.Text = "Have a preparedness kit - here are some of our recommendations for its contents";
+                    residentInfo.Children.Add(label8);
+                    Label label9 = new Label().LoadFromXaml(labelIndentTxt);
+                    label9.Text = "-Emergency Heat Blankets ";
+                    residentInfo.Children.Add(label9);
+                    Label label10 = new Label().LoadFromXaml(labelIndentTxt);
+                    label10.Text = "-Portable Radio";
+                    residentInfo.Children.Add(label10);
+                    Label label11 = new Label().LoadFromXaml(labelIndentTxt);
+                    label11.Text = "-Batteries ";
+                    residentInfo.Children.Add(label11);
+                    Label label12 = new Label().LoadFromXaml(labelIndentTxt);
+                    label12.Text = "-Flash Light/Candles/Matches ";
+                    residentInfo.Children.Add(label12);
+                    Label label13 = new Label().LoadFromXaml(labelIndentTxt);
+                    label13.Text = "-Multitool ";
+                    residentInfo.Children.Add(label13);
+                    Label label14 = new Label().LoadFromXaml(labelIndentTxt);
+                    label14.Text = "-Solar Panel Phone Charger ";
+                    residentInfo.Children.Add(label14);
+                    Label label15 = new Label().LoadFromXaml(labelTxt);
+                    label15.Text = "Have additional storage of: ";
+                    residentInfo.Children.Add(label15);
+                    Label label16 = new Label().LoadFromXaml(labelIndentTxt);
+                    label16.Text = "Food and Water";
+                    residentInfo.Children.Add(label16);
+                    Label label17 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label17.Text = "-Have additional canned food ";
+                    residentInfo.Children.Add(label17);
+                    Label label18 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label18.Text = "-Extra water - Fun Fact: people need to drink around 3.8 liters of water every day.";
+                    residentInfo.Children.Add(label18);
+                    Label label19 = new Label().LoadFromXaml(labelIndentTxt);
+                    label19.Text = "Medicine - if possible have extra medicine ";
+                    residentInfo.Children.Add(label19);
+                    Label label20 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label20.Text = "-Have a First-Aid Kit ";
+                    residentInfo.Children.Add(label20);
+                    Label label21 = new Label().LoadFromXaml(labelIndentTxt);
+                    label21.Text = "If you have pets ";
+                    residentInfo.Children.Add(label21);
+                    Label label22 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label22.Text = "-If possible have back-up food and medication if applicable ";
+                    residentInfo.Children.Add(label22);
+                    Label label23 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label23.Text = "-When calculating your water rations, take your pets into account!";
+                    residentInfo.Children.Add(label23);
+                    Label label24 = new Label().LoadFromXaml(labelTxt);
+                    label24.Text = "Make sure you know where the following are: ";
+                    residentInfo.Children.Add(label24);
+                    Label label25 = new Label().LoadFromXaml(labelIndentTxt );
+                    label25.Text = "-Important Documents ";
+                    residentInfo.Children.Add(label25);
+                    Label label26 = new Label().LoadFromXaml(labelIndentTxt);
+                    label26.Text = "-Emergency Contacts ";
+                    residentInfo.Children.Add(label26);
                     break;
                 case "s":
                     break;
@@ -297,6 +497,230 @@ namespace emergencyPreparednessApp
                 default:
                     break;
             }
+            //Visitor
+            switch (App.Lang)
+            {
+                case "e":
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "If you are a homestay, show your family the “How to Prepare” section  for residents.";
+                    residentInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "If you are staying in a hotel, make sure you pay attention to any information given to you by the staff";
+                    residentInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "If you are staying in an Airbnb, talk to your landowner";
+                    residentInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "-Ask them if they have an emergency plan ";
+                    residentInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "-If they say no, tell the landowner that there is an emergency plan in place and that they should look into it   ";
+                    residentInfo.Children.Add(label5);
+                    Label label6 = new Label().LoadFromXaml(labelTxt);
+                    label6.Text = "";
+                    residentInfo.Children.Add(label6);
+
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void volcanoText() {
+            //Resident
+            switch (App.Lang)
+            {
+                case "e":
+                    intro.Text = "Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared:";
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "Stay informed with the status of storms and other natural disasters, as well as the change in levels of risk through the news and social media. Some of the best methods for staying informed are: ";
+                    residentInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "TV";
+                    residentInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "Facebook";
+                    residentInfo.Children.Add(label5);
+                    Label label6 = new Label().LoadFromXaml(labelIndentTxt);
+                    label6.Text = "Radio";
+                    residentInfo.Children.Add(label6);
+                    Label label7 = new Label().LoadFromXaml(labelIndentTxt);
+                    label7.Text = "WhatsApp";
+                    residentInfo.Children.Add(label7);
+                    Label label8 = new Label().LoadFromXaml(labelTxt);
+                    label8.Text = "Have a preparedness kit - here are some of our recommendations for its contents";
+                    residentInfo.Children.Add(label8);
+                    Label label9 = new Label().LoadFromXaml(labelIndentTxt);
+                    label9.Text = "-Emergency Heat Blankets ";
+                    residentInfo.Children.Add(label9);
+                    Label label10 = new Label().LoadFromXaml(labelIndentTxt);
+                    label10.Text = "-Portable Radio";
+                    residentInfo.Children.Add(label10);
+                    Label label11 = new Label().LoadFromXaml(labelIndentTxt);
+                    label11.Text = "-Batteries ";
+                    residentInfo.Children.Add(label11);
+                    Label label12 = new Label().LoadFromXaml(labelIndentTxt);
+                    label12.Text = "-Flash Light/Candles/Matches ";
+                    residentInfo.Children.Add(label12);
+                    Label label13 = new Label().LoadFromXaml(labelIndentTxt);
+                    label13.Text = "-Multitool ";
+                    residentInfo.Children.Add(label13);
+                    Label label14 = new Label().LoadFromXaml(labelIndentTxt);
+                    label14.Text = "-Solar Panel Phone Charger ";
+                    residentInfo.Children.Add(label14);
+                    Label label15 = new Label().LoadFromXaml(labelTxt);
+                    label15.Text = "Make sure you know where the following are: ";
+                    residentInfo.Children.Add(label15);
+                    Label label16 = new Label().LoadFromXaml(labelIndentTxt);
+                    label16.Text = "-Important Documents ";
+                    residentInfo.Children.Add(label16);
+                    Label label17 = new Label().LoadFromXaml(labelIndentTxt);
+                    label17.Text = "-Emergency Contacts ";
+                    residentInfo.Children.Add(label17);
+                    Label label30 = new Label().LoadFromXaml(labelTxt);
+                    label30.Text = "Have additional storage of: ";
+                    residentInfo.Children.Add(label30);
+                    Label label31 = new Label().LoadFromXaml(labelIndentTxt);
+                    label31.Text = "Food and Water";
+                    residentInfo.Children.Add(label31);
+                    Label label32 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label32.Text = "-Have additional canned food ";
+                    residentInfo.Children.Add(label32);
+                    Label label18 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label18.Text = "-Extra water - Fun Fact: people need to drink around 3.8 liters of water every day.";
+                    residentInfo.Children.Add(label18);
+                    Label label19 = new Label().LoadFromXaml(labelIndentTxt);
+                    label19.Text = "Medicine - if possible have extra medicine ";
+                    residentInfo.Children.Add(label19);
+                    Label label20 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label20.Text = "-Have a First-Aid Kit ";
+                    residentInfo.Children.Add(label20);
+                    Label label21 = new Label().LoadFromXaml(labelIndentTxt);
+                    label21.Text = "If you have pets ";
+                    residentInfo.Children.Add(label21);
+                    Label label22 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label22.Text = "-If possible have back-up food and medication if applicable ";
+                    residentInfo.Children.Add(label22);
+                    Label label23 = new Label().LoadFromXaml(labelIndent2Txt);
+                    label23.Text = "-When calculating your water rations, take your pets into account!";
+                    residentInfo.Children.Add(label23);
+                    Label label24 = new Label().LoadFromXaml(labelTxt);
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+            //Visitor
+            switch (App.Lang)
+            {
+                case "e":
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "If you are a homestay, show your family the “How to Prepare” section for residents";
+                    visitorInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "If you are staying in a hotel, make sure you pay attention to any information given to you by the staff";
+                    visitorInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "If you are staying in an Airbnb, talk to your landowner";
+                    visitorInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "-Ask them if they have an emergency plan ";
+                    visitorInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "-If they say no, tell the landowner that there is an emergency plan in place and that they should look into it";
+                    visitorInfo.Children.Add(label5);
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void earthquakeText()
+        {
+            //Resident
+            switch (App.Lang)
+            {
+                case "e":
+                    intro.Text = "Even if there are currently no signs that this disaster might happen, it is important to lower the risks, therefore, please read through our recommendations for how to be prepared:";
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "Stay informed with the status of storms and other natural disasters, as well as the change in levels of risk through the news and social media. Some of the best methods for staying informed are: ";
+                    residentInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "TV";
+                    residentInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "Facebook";
+                    residentInfo.Children.Add(label5);
+                    Label label6 = new Label().LoadFromXaml(labelIndentTxt);
+                    label6.Text = "Radio";
+                    residentInfo.Children.Add(label6);
+                    Label label7 = new Label().LoadFromXaml(labelIndentTxt);
+                    label7.Text = "WhatsApp";
+                    residentInfo.Children.Add(label7);
+                    Label label8 = new Label().LoadFromXaml(labelTxt);
+                    label8.Text = "When organizing shelves, put heavier objects at the bottom";
+                    residentInfo.Children.Add(label8);
+                    Label label9 = new Label().LoadFromXaml(labelTxt);
+                    label9.Text = "If possible, try to tie or nail heavy objects (TVs, fridges, and shelves) to the wall";
+                    residentInfo.Children.Add(label9);
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+
+            //Visitor
+            switch (App.Lang)
+            {
+                case "e":
+                    Label label1 = new Label().LoadFromXaml(labelTxt);
+                    label1.Text = "If you are a homestay, show your family the “How to Prepare” section for residents";
+                    visitorInfo.Children.Add(label1);
+                    Label label2 = new Label().LoadFromXaml(labelTxt);
+                    label2.Text = "If you are staying in a hotel, make sure you pay attention to any information given to you by the staff";
+                    visitorInfo.Children.Add(label2);
+                    Label label3 = new Label().LoadFromXaml(labelTxt);
+                    label3.Text = "If you are staying in an Airbnb, talk to your landowner";
+                    visitorInfo.Children.Add(label3);
+                    Label label4 = new Label().LoadFromXaml(labelIndentTxt);
+                    label4.Text = "-Ask them if they have an emergency plan ";
+                    visitorInfo.Children.Add(label4);
+                    Label label5 = new Label().LoadFromXaml(labelIndentTxt);
+                    label5.Text = "-If they say no, tell the landowner that there is an emergency plan in place and that they should look into it";
+                    visitorInfo.Children.Add(label5);
+                    break;
+                case "s":
+                    break;
+                case "f":
+                    break;
+                case "g":
+                    break;
+                default:
+                    break;
+            }
+
         }
 
     }

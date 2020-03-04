@@ -38,6 +38,7 @@ namespace emergencyPreparednessApp
             switch (App.Lang)
             {
                 case "e":
+                    backButton.Text = "Back";
                     titleLabel.Text = "Contact Info";
                     emergency.Text = "Emergency: 911";
                     police.Text = "Police: 2645-7074";
@@ -60,15 +61,15 @@ namespace emergencyPreparednessApp
                     friendsSchool.Text = "Spanish Friends School: 2645-5530";
                     break;
                 case "f":
-                    titleLabel.Text = "French Contact Info";
-                    emergency.Text = "French Emergency: 911";
-                    police.Text = "French Police: 2645-7074";
-                    fireFighters.Text = "French Fire Fighters: 2645-7512";
-                    redCross.Text = "French Red Cross: 2645-6128";
-                    waterService.Text = "French Water Service: 2645-5502";
-                    toxicologist.Text = "French Center of Toxicology: 2233-1028";
-                    CPI.Text = "French CPI: 2645-5441";
-                    friendsSchool.Text = "French Friends School: 2645-5530";
+                    titleLabel.Text = "Les coordonnées";
+                    emergency.Text = "L’Urgence: 911";
+                    police.Text = "La police: 2645-7074";
+                    fireFighters.Text = "Les sapeurs pompiers: 2645-7512";
+                    redCross.Text = "La croix rouge: 2645-6128";
+                    waterService.Text = "Le service d’eau: 2645-5502";
+                    toxicologist.Text = "Le centre de toxicologie: 2233-1028";
+                    CPI.Text = "CPI: 2645-5441";
+                    friendsSchool.Text = "L’école d’amis: 2645-5530";
                     break;
                 case "g":
                     titleLabel.Text = "German Contact Info";

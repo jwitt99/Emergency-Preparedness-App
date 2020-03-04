@@ -10,6 +10,7 @@
         <ScrollView>
             <StackLayout>
                 <Button  x:Name="btnPrepare" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="How do you prepare?" />
+                <Label FontSize="30" x:Name="intro"></Label>
                 <Button x:Name="btnResident" BackgroundColor="Green" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="null" Clicked="btnResident_OnClicked" />
                 <StackLayout x:Name="residentInfo" IsVisible="False">
                     <!-- stack layout populated in .cs -->

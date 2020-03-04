@@ -16,9 +16,13 @@ namespace emergencyPreparednessApp
         {
             InitializeComponent();
         }
+        private async void btnWhatIs_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RiskWhatIs());
+        }
         private async void RiskButton_OnClicked(object sender, EventArgs e)
         {
-            App.Risk = ((Button)sender).StyleId;
+            App.Emergency = ((Button)sender).StyleId;
             await Navigation.PushAsync(new Risk());
         }
         private async void ContactInfoButton_OnClicked(object sender, EventArgs e)
@@ -38,13 +42,30 @@ namespace emergencyPreparednessApp
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            switch (App.Loc)
+            {
+                case "monteVerde":
+                    img.Source = "monteVerde";
+                    break;
+                case "cerroPlano":
+                    img.Source = "cerroPlano";
+                    break;
+                case "santaElena":
+                    img.Source = "santaElena";
+                    break;
+                case "sanLuis":
+                    img.Source = "sanLuis";
+                    break;
+                default:
+                    break;
+            }
+
             switch (App.Lang)
             {
                 case "e":
                     landslide.Text = "Landslide";
                     flood.Text = "Flood";
                     fire.Text = "Fire";
-                    fallenObject.Text = "Fallen Object";
                     contactInfo.Text = "Contact info";
                     changeLang.Text = "Change Language";
                     changeLoc.Text = "Change Location";
@@ -53,25 +74,22 @@ namespace emergencyPreparednessApp
                     landslide.Text = "Spanish landslide";
                     flood.Text = "Spanish flood";
                     fire.Text = "Spanish fire";
-                    fallenObject.Text = "Spanish fallenObject";
                     contactInfo.Text = "Spanish contact info";
                     changeLang.Text = "Spanish Language";
                     changeLoc.Text = "Spanish Location";
                     break;
                 case "f":
-                    landslide.Text = "French landslide";
-                    flood.Text = "French flood";
-                    fire.Text = "French fire";
-                    fallenObject.Text = "French fallenObject";
-                    contactInfo.Text = "French contact info";
-                    changeLang.Text = "French Change Language";
-                    changeLoc.Text = "French Change Location";
+                    landslide.Text = "Glissement de terre";
+                    flood.Text = "Inondation";
+                    fire.Text = "Feu";
+                    contactInfo.Text = "Coordonnées";
+                    changeLang.Text = "Changez de langue";
+                    changeLoc.Text = "Changez de lieu";
                     break;
                 case "g":
                     landslide.Text = "German landslide";
                     flood.Text = "German flood";
                     fire.Text = "German fire";
-                    fallenObject.Text = "German fallenObject";
                     contactInfo.Text = "German contact info";
                     changeLang.Text = "German Change Language";
                     changeLoc.Text = "German Change Location";
@@ -80,7 +98,7 @@ namespace emergencyPreparednessApp
                     break;
             }
 
-            switch (App.NaturalDisaster) {
+            switch (App.Emergency) {
                 case "earthquake":
                     switch (App.Lang)
                     {
@@ -91,7 +109,7 @@ namespace emergencyPreparednessApp
                             titleLabel.Text = "Spanish earthquake";
                             break;
                         case "f":
-                            titleLabel.Text = "French earthquake";
+                            titleLabel.Text = "Tremblement de terre";
                             break;
                         case "g":
                             titleLabel.Text = "Spanish earthquake";
@@ -112,7 +130,7 @@ namespace emergencyPreparednessApp
                             titleLabel.Text = "Spanish tropical storm";
                             break;
                         case "f":
-                            titleLabel.Text = "French tropical storm";
+                            titleLabel.Text = "Tempête tropical";
                             break;
                         case "g":
                             titleLabel.Text = "Spanish tropical storm";
@@ -121,7 +139,6 @@ namespace emergencyPreparednessApp
                             break;
                     }
                     fire.IsVisible = false;
-                    fallenObject.IsVisible = false;
                     break;
                 case "volcano":
                     switch (App.Lang)

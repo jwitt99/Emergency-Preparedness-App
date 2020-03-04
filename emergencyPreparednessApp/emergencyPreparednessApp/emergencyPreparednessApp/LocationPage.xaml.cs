@@ -37,7 +37,7 @@ namespace emergencyPreparednessApp
                 case "e":
                     label1.Text = "What region are you from?";
                     notSureButton.Text = "Not Sure";
-                    popupName = "You sure?";
+                    popupName = "Are you sure?";
                     popupText = "Choosing a location will allow you to get more specific information";
                     yesButton = "yes";
                     noButton = "no";
@@ -55,14 +55,14 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "Spanish contact info";
                     break;
                 case "f":
-                    label1.Text = "French What region are you from?";
-                    notSureButton.Text = "Not sure but in french";
-                    popupName = "You sure? But in french";
-                    popupText = "French version of Choosing a location will allow you to get more specific information";
-                    yesButton = "French yes";
-                    noButton = "French no";
-                    changeLang.Text = "French Change Language";
-                    contactInfo.Text = "French contact info";
+                    label1.Text = "De quelle région êtes-vous?";
+                    notSureButton.Text = "Pas certain";
+                    popupName = "Vous-êtes sûr?";
+                    popupText = "Choisir un emplacement va vous permettre d’obtenir plus d’information spécifique ";
+                    yesButton = "Oui";
+                    noButton = "Non";
+                    changeLang.Text = "Changez de langue";
+                    contactInfo.Text = "Coordonnées";
                     break;
                 case "g":
                     label1.Text = "German What region are you from?";
@@ -96,6 +96,7 @@ namespace emergencyPreparednessApp
         }
         private async void RegionButton_OnClicked(object sender, EventArgs e)
         {
+            App.Loc = ((Button)sender).StyleId;
             if (isFirst)
             {
                 isFirst = false;

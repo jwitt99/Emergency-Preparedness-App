@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="emergencyPreparednessApp.App">
     <Application.Resources>
+        <!-- custom fonts -->
         <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
             <On Platform="Android" Value="OpenSans-Bold.ttf#Open Sans" />
             <On Platform="iOS" Value="OpenSans-Bold" />
@@ -22,6 +23,8 @@
             <On Platform="Android" Value="OpenSans-BoldItalic.ttf#Open Sans" />
             <On Platform="iOS" Value="OpenSans-BoldItalic" />
         </OnPlatform>
+        
+        <!-- setting universal properties for different objects : can be overwritten by local properties-->
         <Style TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
             <Setter Property="FontAttributes" Value="Bold" />

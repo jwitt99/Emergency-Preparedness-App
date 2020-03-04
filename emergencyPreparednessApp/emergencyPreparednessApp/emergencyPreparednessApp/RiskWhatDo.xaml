@@ -7,8 +7,25 @@
              x:Class="emergencyPreparednessApp.RiskWhatDo"
              BackgroundColor="#11401e">
     <ContentPage.Content>
-        <StackLayout>
-            <Label HorizontalOptions="CenterAndExpand" x:Name="btnWhatDo" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="What do you do?" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Button x:Name="btnWhatDo" BackgroundColor="Gray" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="What do you do?" />
+                <Label FontSize="30" x:Name="intro"></Label>
+                <Button x:Name="btnResident" BackgroundColor="Green" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="null" Clicked="btnResident_OnClicked" />
+                <StackLayout x:Name="residentInfo" IsVisible="False">
+                    <!-- stack layout populated in .cs -->
+                </StackLayout>
+                <Button x:Name="btnVisitor" BackgroundColor="Green" FontSize="30" FontFamily="{StaticResource BoldFont}" Text="null" Clicked="btnVisitor_OnClicked" />
+                <StackLayout x:Name="visitorInfo" IsVisible="False">
+                    <!-- stack layout populated in .cs -->
+                </StackLayout>
+                <Label HeightRequest="12"></Label>
+                <StackLayout VerticalOptions="EndAndExpand"  Orientation="Horizontal" BackgroundColor="Black" Padding="10" >
+                    <Button x:Name="changeLang" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Language" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="LanguageButton_OnClicked" StyleId="f" />
+                    <Button x:Name="contactInfo" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Contact Info" TextColor="AntiqueWhite" BackgroundColor="#AA1010" Clicked="ContactInfoButton_OnClicked" />
+                    <Button x:Name="changeLoc" HorizontalOptions="CenterAndExpand" BorderRadius="20" BorderWidth="10" WidthRequest="100" FontSize="Small" Text="Change Location" TextColor="AntiqueWhite" BackgroundColor="#036617" Clicked="RegionButton_OnClicked" StyleId="g" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

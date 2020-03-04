@@ -19,12 +19,12 @@ namespace emergencyPreparednessApp
 
         private async void NatDisButton_OnClicked(object sender, EventArgs e)
         {
-            App.NaturalDisaster = ((Button)sender).StyleId;
+            App.Emergency = ((Button)sender).StyleId;
             await Navigation.PushAsync(new NaturalDisaster());
         }
         private async void RiskButton_OnClicked(object sender, EventArgs e)
         {
-            App.Risk = ((Button)sender).StyleId;
+            App.Emergency = ((Button)sender).StyleId;
             await Navigation.PushAsync(new Risk());
         }
 
@@ -45,14 +45,31 @@ namespace emergencyPreparednessApp
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            switch (App.Loc) {
+                case "monteVerde":
+                    img.Source = "monteVerde";
+                    break;
+                case "cerroPlano":
+                    img.Source = "cerroPlano";
+                    break;
+                case "santaElena":
+                    img.Source = "santaElena";
+                    break;
+                case "sanLuis":
+                    img.Source = "sanLuis";
+                    break;
+                default:
+                    break;
+            }
+
             switch (App.Lang)
             {
                 case "e":
-                    label1.Text = "Risks";
+                    risks.Text = "Risks";
                     landslide.Text = "landslide";
                     flood.Text = "flood";
                     fire.Text = "fire";
-                    label2.Text = "Natural Disasters";
+                    naturalDisasters.Text = "Natural Disasters";
                     tropicalStorm.Text = "Tropical Storm";
                     earthquake.Text = "Earthquake";
                     volcanicActivity.Text = "Secondary Effects from Volcanic Activity";
@@ -61,11 +78,11 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "Contact info";
                     break;
                 case "s":
-                    label1.Text = "Spanish label1";
+                    risks.Text = "Spanish risks";
                     landslide.Text = "Spanish landslide";
                     flood.Text = "Spanish flood";
                     fire.Text = "Spanish fire";
-                    label2.Text = "Spanish label2";
+                    naturalDisasters.Text = "Spanish naturalDisasters";
                     tropicalStorm.Text = "Spanish tropicalStorm";
                     earthquake.Text = "Spanish earthquake";
                     volcanicActivity.Text = "Spanish Secondary Effects from Volcanic Activity";
@@ -74,24 +91,24 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "Spanish contact info";
                     break;
                 case "f":
-                    label1.Text = "French label1";
-                    landslide.Text = "French landslide";
-                    flood.Text = "French flood";
-                    fire.Text = "French fire";
-                    label2.Text = "French label2";
-                    tropicalStorm.Text = "French tropicalStorm";
-                    earthquake.Text = "French earthquake";
-                    volcanicActivity.Text = "French Secondary Effects from Volcanic Activity";
-                    changeLang.Text = "French changeLang";
-                    changeLoc.Text = "French changeLoc";
-                    contactInfo.Text = "French contact info";
+                    risks.Text = "Risques";
+                    landslide.Text = "Glissement de terre";
+                    flood.Text = "Inondation";
+                    fire.Text = "Feu";
+                    naturalDisasters.Text = "Catastrophes Naturelles";
+                    tropicalStorm.Text = "Tempête tropical";
+                    earthquake.Text = "Tremblement de terre";
+                    volcanicActivity.Text = "Effets secondaire d’activité volcanique";
+                    changeLang.Text = "Changez de langue";
+                    changeLoc.Text = "Changez de lieu";
+                    contactInfo.Text = "Coordonnées";
                     break;
                 case "g":
-                    label1.Text = "German label1";
+                    risks.Text = "German risks";
                     landslide.Text = "German landslide";
                     flood.Text = "German flood";
                     fire.Text = "German fire";
-                    label2.Text = "German label2";
+                    naturalDisasters.Text = "German naturalDisasters";
                     tropicalStorm.Text = "German tropicalStorm";
                     earthquake.Text = "German earthquake";
                     volcanicActivity.Text = "German Secondary Effects from Volcanic Activity";
@@ -100,7 +117,7 @@ namespace emergencyPreparednessApp
                     contactInfo.Text = "German contact info";
                     break;
                 default:
-                    label1.Text = "Something broke";
+                    risks.Text = "Something broke";
                     break;
             }
         }
